@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+    .green {
+      color: green;
+    }
+    .blue {
+      color: blue;
+    }
+    .underline {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>前端与移动开发</li>
+    <li class="blue">java</li>
+    <li>javascript</li>
+    <li>c++</li>
+  </ul>
+  <input type="button" value="为第一个li元素添加样式" id="add">
+  <input type="button" value="为第二个li元素移除样式" id="remove">
+  <input type="button" value="为第三个li元素切换样式" id="toggle">
+  <input type="button" value="判断第四个li元素是否包含某个样式" id="contain">
+  <script>
+    window.onload = function() {
+      document.querySelector('#add').onclick = function() {
+        document.querySelector('li').classList.add("red")
+      }
+      document.querySelector("#remove").onclick = function() {
+        document.querySelector('.blue').classList.remove('blue')
+      }
+      document.querySelector('#toggle').onclick = function() {
+        document.querySelectorAll('li')[2].classList.toggle('green')
+      }
+      document.querySelector('#contain').onclick = function() {
+        var isContain = document.querySelectorAll("li")[3].classList.contains('red')
+        console.log(isContain)
+      }
+    }
+  </script>
+</body>
+</html>

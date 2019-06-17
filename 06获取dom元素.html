@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .green {
+      color: green;
+    }
+    .blue {
+      color: blue;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="green">java</li>
+    <li class="blue">js</li>
+    <li class="red">c++</li>
+    <li id="python">python</li>
+  </ul>
+  <script>
+    window.onload = function() {
+      var javaLi = document.querySelector('.green')
+      var pythonLi = document.querySelector('#python')
+      var allLi = document.querySelectorAll('li')
+      console.log(javaLi)
+      console.log(pythonLi)
+      console.log(allLi)
+    } 
+  </script>
+</body>
+</html>

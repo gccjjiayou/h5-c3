@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  sessionStorage的使用：<br>
+  <input type="text" id="userName"><br>
+  <input type="button" value="设置数据" id="setData">
+  <input type="button" value="获取数据" id="getData">
+  <input type="button" value="删除数据" id="removeData">
+  <script>
+    document.querySelector('#setData').onclick = function () {
+      var name = document.querySelector('#userName').value
+      sessionStorage.setItem('username', name)
+    }
+    document.querySelector("#getData").onclick = function() {
+      var name = sessionStorage.getItem('username')
+      alert(name)
+    }
+    document.querySelector('#removeData').onclick = function() {
+      sessionStorage.removeItem('username')
+    }
+  </script>
+</body>
+
+</html>
