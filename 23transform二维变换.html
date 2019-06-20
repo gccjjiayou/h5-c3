@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin-left: 200px;
+      margin-top: 10px;
+      transition: transform 2s;
+    }
+    div:first-of-type:active {
+      transform: translateY(300px);
+    }
+    div:nth-of-type(2):active {
+      transform: scale(2, 1);
+    }
+    div:nth-of-type(3) {
+      transform-origin: 0px 0px;
+    }
+    div:nth-of-type(3):active {
+      /* transform: rotate(-90deg); */
+      transform: rotate(-90deg) translateX(300px);
+
+    }
+  </style>
+</head>
+<body>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</body>
+</html>
